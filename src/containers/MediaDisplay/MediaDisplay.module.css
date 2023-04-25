@@ -1,0 +1,179 @@
+.linesWr {
+  @apply
+  self-stretch
+  flex
+  flex-col
+  flex-nowrap
+  items-stretch
+  justify-around
+  pt-6
+  pb-10
+  w-lines-wr-lg;
+
+  @apply sm:max-lg:hidden;
+}
+
+.line {
+  @apply h-line;
+}
+
+.line:nth-child(1) {
+  @apply
+  grow
+  pt-5;
+
+  @apply
+  before:content-['']
+  before:block
+  before:w-line-scaled
+  before:h-1/2;
+
+  @apply
+  after:content-['']
+  after:block
+  after:w-line-scaled
+  after:h-1/2;
+}
+
+.leftLines .line:nth-child(1) {
+  @apply
+  before:border-t-2
+  before:border-t-purple-300
+  before:border-r-2
+  before:border-r-purple-300
+  before:border-b-0
+  before:rounded-tr-line-shape;
+
+  @apply
+  after:ml-auto
+  after:border-t-0
+  after:border-b-2
+  after:border-b-purple-300
+  after:border-l-2
+  after:border-l-purple-300
+  after:rounded-bl-line-shape;
+}
+
+.leftLines .line.active:nth-child(1) {
+  @apply
+  before:border-t-violet-soft
+  before:border-r-violet-soft;
+
+  @apply
+  after:border-b-violet-soft
+  after:border-l-violet-soft;
+}
+
+.rightLines .line:nth-child(1) {
+  @apply
+  before:ml-auto
+  before:border-t-2
+  before:border-t-purple-300
+  before:border-l-2
+  before:border-l-purple-300
+  before:border-b-0
+  before:rounded-tl-line-shape;
+
+  @apply
+  after:border-t-0
+  after:border-b-2
+  after:border-b-purple-300
+  after:border-r-2
+  after:border-r-purple-300
+  after:rounded-br-line-shape;
+}
+
+.rightLines .line.active:nth-child(1) {
+  @apply
+  before:border-t-violet-soft
+  before:border-l-violet-soft;
+
+  @apply
+  after:border-b-violet-soft
+  after:border-r-violet-soft;
+}
+
+.line:nth-child(2) {
+  @apply
+  h-line
+  w-full
+  bg-purple-300;
+}
+
+.line.active:nth-child(2) {
+  @apply bg-violet-soft;
+}
+
+.line:nth-child(3) {
+  @apply grow;
+
+  @apply
+  before:content-['']
+  before:block
+  before:w-line-scaled
+  before:h-1/2;
+
+  @apply
+  after:content-['']
+  after:block
+  after:w-line-scaled
+  after:h-1/2;
+}
+
+.leftLines .line:nth-child(3) {
+  @apply
+  before:ml-auto
+  before:border-t-2
+  before:border-t-purple-300
+  before:border-l-2
+  before:border-l-purple-300
+  before:border-b-0
+  before:rounded-tl-line-shape;
+
+  @apply
+  after:border-t-0
+  after:border-b-2
+  after:border-b-purple-300
+  after:border-r-2
+  after:border-r-purple-300
+  after:rounded-br-line-shape;
+}
+
+.leftLines .line.active:nth-child(3) {
+  @apply
+  before:border-t-violet-soft
+  before:border-l-violet-soft;
+
+  @apply
+  after:border-b-violet-soft
+  after:border-r-violet-soft;
+}
+
+.rightLines .line:nth-child(3) {
+  @apply
+  before:border-t-2
+  before:border-t-purple-300
+  before:border-r-2
+  before:border-r-purple-300
+  before:border-b-0
+  before:rounded-tr-line-shape;
+
+  @apply
+  after:ml-auto
+  after:border-b-0
+  after:border-b-2
+  after:border-b-purple-300
+  after:border-l-2
+  after:border-l-purple-300
+  after:rounded-bl-line-shape;
+}
+
+.rightLines .line.active:nth-child(3) {
+  @apply
+  before:border-t-violet-soft
+  before:border-r-violet-soft;
+
+  @apply
+  after:border-b-violet-soft
+  after:border-l-violet-soft;
+}
